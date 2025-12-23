@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemental Clasher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img id="logo" src="logo.png" alt="Elemental Clasher Logo">
+            <h1>Elemental Clasher</h1>
+            <p>Batalha de 11 Elementos!</p>
+        </header>
+
+        <div class="status-container">
+            <div id="status-jogador" class="status-box">
+                <h2>Jogador (Você)</h2>
+                <div class="hp-bar-container">
+                    <div id="hp-jogador" class="hp-bar"></div>
+                </div>
+                <p>HP: <span id="hp-jogador-valor">100</span></p>
+                <p>Moedas: <span id="moedas-valor">0</span></p>
+            </div>
+            <div id="status-computador" class="status-box">
+                <h2>Computador</h2>
+                <div class="hp-bar-container">
+                    <div id="hp-computador" class="hp-bar"></div>
+                </div>
+                <p>HP: <span id="hp-computador-valor">100</span></p>
+                <p>Escolha: <span id="escolha-computador-display">?</span></p>
+            </div>
+        </div>
+
+        <div id="resultado" class="resultado">Escolha seu elemento para começar a luta!</div>
+
+        <div class="botoes-escolha">
+            <button id="fogo" class="btn-escolha">🔥 Fogo</button>
+            <button id="agua" class="btn-escolha">💧 Água</button>
+            <button id="planta" class="btn-escolha">🌱 Planta</button>
+            <button id="vento" class="btn-escolha">🌬️ Vento</button>
+            <button id="tempestade" class="btn-escolha">⛈️ Tempestade</button>
+            <button id="pedra" class="btn-escolha">🪨 Pedra</button>
+            <button id="lava" class="btn-escolha">🌋 Lava</button>
+            <button id="gelo" class="btn-escolha">❄️ Gelo</button>
+            <button id="luz" class="btn-escolha">✨ Luz</button>
+            <button id="sombra" class="btn-escolha">🌑 Sombra</button>
+            <button id="vacuo" class="btn-escolha" style="display: none;">⚫ Vácuo</button>
+        </div>
+        
+        <div class="controles">
+            <button id="abrir-loja" class="btn-loja">🛒 Loja de Upgrades</button>
+            <button id="desafio-diario" class="btn-desafio">🎯 Desafio Diário</button>
+            <button id="reiniciar-jogo" class="btn-reiniciar">🔁 Novo Jogo</button>
+        </div>
+
+        <div id="modal-loja" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>🛒 Loja de Upgrades</h2>
+                <p>Suas Moedas: <span id="loja-moedas-valor">0</span></p>
+                <div id="loja-itens">
+                    </div>
+                <div id="loja-status">
+                    <p>Dano Bônus: <span id="loja-dano-bonus">0</span></p>
+                    <p>HP Inicial Bônus: <span id="loja-hp-bonus">0</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-desafio" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>🎯 Desafio Diário</h2>
+                <p id="desafio-texto">Vença 5 rodadas de Fogo contra Água.</p>
+                <p>Progresso: <span id="desafio-progresso">0/5</span></p>
+                <button id="resgatar-recompensa" class="btn-resgatar" disabled>Resgatar Recompensa (100 M.E.)</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
